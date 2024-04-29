@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+#define PI 3.14159265
+
+int main() {
+    double angle_degrees, angle_radians;
+    
+    while (1) {
+        printf("Entrez un angle en degrés (ou tapez 0 pour quitter) : ");
+        scanf("%lf", &angle_degrees);
+
+        if (angle_degrees == 0)
+            break;
+
+        angle_radians = angle_degrees * (PI / 180.0);
+        
+        double sin_result = sin(angle_radians);
+        double cos_result = cos(angle_radians);
+        
+        printf("cos(%.2f°) = %.6f\n", angle_degrees, cos_result);
+        printf("sin(%.2f°) = %.6f\n", angle_degrees, sin_result);
+    }
+    
+    return 0;
+}
